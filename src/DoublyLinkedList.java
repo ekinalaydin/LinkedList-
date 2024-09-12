@@ -14,6 +14,7 @@ public class DoublyLinkedList {
             this.value = value;
         }
     }
+
     public DoublyLinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
@@ -57,15 +58,16 @@ public class DoublyLinkedList {
             printList();
         }
     }
+
     public void makeDDEmpty() {
         head = null;
         tail = null;
         length = 0;
     }
 
-    public void append (int value) {
+    public void append(int value) {
         Node newNode = new Node(value);
-        if(length == 0) {
+        if (length == 0) {
             head = newNode;
             tail = newNode;
         } else {
@@ -76,15 +78,15 @@ public class DoublyLinkedList {
         length++;
     }
 
-    public Node removeLast () {
-        if(length ==0){
+    public Node removeLast() {
+        if (length == 0) {
             return null;
         }
         Node temp = tail;
-        if(length ==1){
+        if (length == 1) {
             head = null;
-            tail= null;
-        }else{
+            tail = null;
+        } else {
             tail = tail.prev;
             tail.next = null;
             temp.prev = null;
@@ -94,4 +96,16 @@ public class DoublyLinkedList {
         return temp;
     }
 
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        length++;
+    }
 }

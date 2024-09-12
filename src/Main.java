@@ -21,9 +21,20 @@ public class Main {
         myDD.append(3);
         myDD.append(4);
         myDD.printDDAll();
+
+
         myDD.removeLast();
         myDD.printDDAll();
 
+        System.out.println("Before prepend():");
+        System.out.println("-----------------");
+        myDD.printDDAll();
+
+        myDD.prepend(1);
+
+        System.out.println("\n\nAfter prepend():");
+        System.out.println("----------------");
+        myDD.printDDAll();
 
     }
 }
