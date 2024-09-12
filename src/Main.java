@@ -30,11 +30,18 @@ public class Main {
         System.out.println("-----------------");
         myDD.printDDAll();
 
-        myDD.prepend(1);
+        myDD.prepend(18);
 
         System.out.println("\n\nAfter prepend():");
         System.out.println("----------------");
         myDD.printDDAll();
+        System.out.println("----------------");
+        System.out.println("Deleted Value: ");
+
+        System.out.println(myDD.removeFirst().value);
+        System.out.println();
+        myDD.printDDAll();
+
 
     }
 }
