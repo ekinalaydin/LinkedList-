@@ -54,5 +54,11 @@ public class Main {
         myDD.set(1, 45);
         myDD.printDDAll();
 
+        System.out.println("DLL before remove():");
+        myDD.printList();
+        System.out.println("\nRemoved node:");
+        System.out.println(myDD.remove(1).value);
+        System.out.println("DLL after remove() in middle:");
+        myDD.printList();
     }
 }
