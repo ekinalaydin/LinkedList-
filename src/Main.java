@@ -42,6 +42,12 @@ public class Main {
         System.out.println();
         myDD.printDDAll();
 
+        System.out.println("----------------");
+        System.out.println("Value of given index is: " + myDD.get(0).value);
+
+        System.out.println("----------------");
+        System.out.println("Value of changed index is: " + myDD.set(0, 10));
+        System.out.println("Value of changed index is: " + myDD.get(0).value);
 
     }
 }
