@@ -20,6 +20,7 @@ public class Main {
         myDD.append(0);
         myDD.append(3);
         myDD.append(4);
+        myDD.append(123);
         myDD.printDDAll();
 
 
@@ -48,6 +49,10 @@ public class Main {
         System.out.println("----------------");
         System.out.println("Value of changed index is: " + myDD.set(0, 10));
         System.out.println("Value of changed index is: " + myDD.get(0).value);
+        System.out.println("----------------");
+
+        myDD.set(1, 45);
+        myDD.printDDAll();
 
     }
 }

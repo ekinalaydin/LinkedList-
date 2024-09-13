@@ -160,4 +160,26 @@ public class DoublyLinkedList {
         return false;
     }
 
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) {
+            return false;
+        }
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+        if (index == length) {
+            append(value);
+            return true;
+        }
+        Node newNode = new Node(value);
+        Node before = get(index - 1); // Get the node before the specified index
+        Node after = before.next;    // Get the node after the specified index
+        newNode.prev = before;
+        newNode.next = after;
+        before.next = newNode;
+        after.prev = newNode;
+        length++;
+        return true;
+    }
 }
