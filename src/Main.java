@@ -60,5 +60,14 @@ public class Main {
         System.out.println(myDD.remove(1).value);
         System.out.println("DLL after remove() in middle:");
         myDD.printList();
+        System.out.println("DLL before swap:");
+        
+        myDD.printList();
+
+        myDD.swapFirstLast();
+
+        System.out.println("\nDLL after swap:");
+        myDD.printList();
+
     }
 }
